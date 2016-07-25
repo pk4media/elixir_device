@@ -34,6 +34,6 @@ defmodule ElixirDevice.Mixfile do
     [files: ["lib", "mix.exs", "README*", "LICENSE*"],
      maintainers: ["David Negstad"],
      licenses: ["MIT"],
-     links: %{"GitHub" => "https://github.com/dnegstad/elixir_device"}]
+     links: %{"GitHub" => "https://github.com/pk4media/elixir_device"}]
   end
 end
