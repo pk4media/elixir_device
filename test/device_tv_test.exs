@@ -1,7 +1,7 @@
-defmodule ElixirDeviceTvTest do
+defmodule DeviceTvTest do
   use ExUnit.Case
 
-  alias ElixirDevice.Parser
+  alias Device.Parser
 
   @device "tv"
 

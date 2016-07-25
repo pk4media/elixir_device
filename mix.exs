@@ -1,8 +1,8 @@
-defmodule ElixirDevice.Mixfile do
+defmodule Device.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :elixir_device,
+    [app: :device,
      version: "0.3.8",
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,

@@ -1,7 +1,7 @@
-defmodule ElixirDeviceDesktopTest do
+defmodule DeviceDesktopTest do
   use ExUnit.Case
 
-  alias ElixirDevice.Parser
+  alias Device.Parser
 
   @device "desktop"
 

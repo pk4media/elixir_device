@@ -1,20 +1,20 @@
-defmodule ElixirDevice.Parser do
+defmodule Device.Parser do
 
   @doc"""
   ## Examples
 
-    iex> ElixirDevice.Parser.parse(nil)
+    iex> Device.Parser.parse(nil)
     "desktop"
-    iex> ElixirDevice.Parser.parse("")
+    iex> Device.Parser.parse("")
     "desktop"
-    iex> ElixirDevice.Parser.parse("Mozilla/5.0 (X11; u; Linux; C) AppleWebKit /533.3 (Khtml, like Gheko) QtCarBrowser Safari /533.3")
+    iex> Device.Parser.parse("Mozilla/5.0 (X11; u; Linux; C) AppleWebKit /533.3 (Khtml, like Gheko) QtCarBrowser Safari /533.3")
     "car"
-    iex> ElixirDevice.Parser.parse("Mozilla/5.0 (compatible; 008/0.83; http://www.80legs.com/webcrawler.html) Gecko/2008032620")
+    iex> Device.Parser.parse("Mozilla/5.0 (compatible; 008/0.83; http://www.80legs.com/webcrawler.html) Gecko/2008032620")
     "bot"
   """
   @spec parse(String.t | nil) :: String.t
   def parse(nil) do
-    Application.fetch_env!(:elixir_device, :empty_device_type)
+    Application.fetch_env!(:device, :empty_device_type)
   end
   def parse("") do
     parse(nil)
@@ -35,9 +35,9 @@ defmodule ElixirDevice.Parser do
       String.match?(ua, ~r/Xbox|PLAYSTATION (3|4)|Wii/i) ->
         "tv"
       String.match?(ua, ~r/QtCarBrowser/i) ->
-        Application.fetch_env!(:elixir_device, :car_device_type)
+        Application.fetch_env!(:device, :car_device_type)
       String.match?(ua, ~r/Googlebot/i) ->
-        Application.fetch_env!(:elixir_device, :bot_device_type)
+        Application.fetch_env!(:device, :bot_device_type)
       String.match?(ua, ~r/iP(a|ro)d/i) ->
         "tablet"
       String.match?(ua, ~r/tablet/i) && !String.match?(ua, ~r/RX-34/i) ->
@@ -71,9 +71,9 @@ defmodule ElixirDevice.Parser do
       String.match?(ua, ~r/Solaris|SunOS|BSD/i) ->
         "desktop"
       String.match?(ua, ~r/Mozilla\/5\.0 \(\)|jack|Applebot|FlipboardProxy|Go 1.1 package|HTMLParser|simplereach|python-requests|ShowyouBot|MetaURI|nineconnections|(^Java\/[0-9._]*)|Commons-HttpClient|InAGist|HTTP-Java-Client|curl|Wget|Bot|B-O-T|Crawler|Spider|Spyder|Yahoo|ia_archiver|Covario-IDS|findlinks|DataparkSearch|larbin|Mediapartners-Google|NG-Search|Snappy|Teoma|Jeeves|Charlotte|NewsGator|TinEye|Cerberian|SearchSight|Zao|Scrubby|Qseero|PycURL|Pompos|oegp|SBIder|yoogliFetchAgent|yacy|webcollage|VYU2|voyager|updated|truwoGPS|StackRambler|Sqworm|silk|semanticdiscovery|ScoutJet|Nymesis|NetResearchServer|MVAClient|mogimogi|Mnogosearch|Arachmo|Accoona|holmes|htdig|ichiro|webis|LinkWalker|lwp-trivial|facebookexternalhit|monit\/|ELB-HealthChecker\/|JobBot|GoogleCloudMonitoring/i) && !String.match?(ua, ~r/phone|Playstation/i) ->
-        Application.fetch_env!(:elixir_device, :bot_device_type)
+        Application.fetch_env!(:device, :bot_device_type)
       true ->
-        Application.fetch_env!(:elixir_device, :unknown_device_type)
+        Application.fetch_env!(:device, :unknown_device_type)
     end
   end
 end

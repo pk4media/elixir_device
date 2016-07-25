@@ -1,7 +1,7 @@
-defmodule ElixirDevicePhoneTest do
+defmodule DevicePhoneTest do
   use ExUnit.Case
 
-  alias ElixirDevice.Parser
+  alias Device.Parser
 
   @device "phone"
 

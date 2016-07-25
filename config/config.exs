@@ -2,13 +2,13 @@
 # and its dependencies with the aid of the Mix.Config module.
 use Mix.Config
 
-config :elixir_device,
+config :device,
   empty_device_type: "desktop"
-config :elixir_device,
+config :device,
   car_device_type: "car"
-config :elixir_device,
+config :device,
   bot_device_type: "bot"
-config :elixir_device,
+config :device,
   unknown_device_type: "phone"
 
 # This configuration is loaded before any dependency and is restricted
@@ -19,11 +19,11 @@ config :elixir_device,
 
 # You can configure for your application as:
 #
-#     config :elixir_device, key: :value
+#     config :device, key: :value
 #
 # And access this configuration in your application as:
 #
-#     Application.get_env(:elixir_device, :key)
+#     Application.get_env(:device, :key)
 #
 # Or configure a 3rd-party app:
 #
