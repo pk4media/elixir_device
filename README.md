@@ -4,13 +4,11 @@ Elixir UserAgent device detection based on the [device](https://github.com/rguer
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
-
   1. Add `elixir_device` to your list of dependencies in `mix.exs`:
 
     ```elixir
     def deps do
-      [{:elixir_device, "~> 0.1.0"}]
+      [{:elixir_device, "~> 0.3.0"}]
     end
     ```
 

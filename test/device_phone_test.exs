@@ -5,6 +5,9 @@ defmodule ElixirDevicePhoneTest do
 
   @device "phone"
 
+  # regex find replace for device test cases
+  # describe\('(?:\d+\.)?([^']*)',.*\n.*\n.*device\('([^']*)'\);\n.*\n.*\n.*
+  # {"$1", "$2"}
   @data [
     {"PHILIPS9", "PHILIPS9@9V ObigoInternetBrowser/2.0"},
     {"PHILIPS9", "PHILIPS9@9V ObigoInternetBrowser/2.0"},

@@ -13,7 +13,7 @@ defmodule ElixirDevice.Mixfile do
   end
 
   def application do
-    [applications: [:logger, :benchfella],
+    [applications: [:logger],
      env: [car_device_type: "car",
            bot_device_type: "bot",
            unknown_device_type: "phone",
@@ -21,7 +21,7 @@ defmodule ElixirDevice.Mixfile do
   end
 
   defp deps do
-    [{:benchfella, "~> 0.3.0"}]
+    [{:benchfella, "~> 0.3.0", only: [:dev, :test]}]
   end
 
   defp description do
