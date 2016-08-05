@@ -19,7 +19,8 @@ defmodule Device.Mixfile do
   end
 
   defp deps do
-    [{:benchfella, "~> 0.3.0", only: [:dev, :test]}]
+    [{:benchfella, "~> 0.3.0", only: [:dev, :test]},
+     {:ex_doc, ">= 0.0.0", only: :dev}]
   end
 
   defp description do
