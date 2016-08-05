@@ -3,7 +3,7 @@ defmodule DeviceTabletTest do
 
   alias Device.Parser
 
-  @device "tablet"
+  @device :tablet
 
   @data [
     {"Acer A500", "Mozilla/5.0 (Linux; U; Android 3.0.1; fr-fr; A500 Build/HRI66) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13"},

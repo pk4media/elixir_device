@@ -3,13 +3,9 @@
 use Mix.Config
 
 config :device,
-  empty_device_type: "desktop"
+  empty: :desktop
 config :device,
-  car_device_type: "car"
-config :device,
-  bot_device_type: "bot"
-config :device,
-  unknown_device_type: "phone"
+  unknown: :phone
 
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this

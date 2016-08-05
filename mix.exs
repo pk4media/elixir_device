@@ -3,7 +3,7 @@ defmodule Device.Mixfile do
 
   def project do
     [app: :device,
-     version: "0.3.8",
+     version: "1.0.0",
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -14,10 +14,8 @@ defmodule Device.Mixfile do
 
   def application do
     [applications: [:logger],
-     env: [car_device_type: "car",
-           bot_device_type: "bot",
-           unknown_device_type: "phone",
-           empty_device_type: "desktop"]]
+     env: [unknown: :phone,
+           empty: :desktop]]
   end
 
   defp deps do

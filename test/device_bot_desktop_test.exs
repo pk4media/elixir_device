@@ -3,7 +3,7 @@ defmodule DeviceBotTest do
 
   alias Device.Parser
 
-  @device "bot"
+  @device :bot
 
   @data [
     {"008 0.83", "Mozilla/5.0 (compatible; 008/0.83; http://www.80legs.com/webcrawler.html) Gecko/2008032620"},

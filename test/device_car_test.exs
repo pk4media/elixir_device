@@ -3,7 +3,7 @@ defmodule DeviceCarTest do
 
   alias Device.Parser
 
-  @device "car"
+  @device :car
 
   @data [
     {"Tesla Model S", "Mozilla/5.0 (X11; u; Linux; C) AppleWebKit /533.3 (Khtml, like Gheko) QtCarBrowser Safari /533.3"}

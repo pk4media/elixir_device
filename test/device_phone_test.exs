@@ -3,7 +3,7 @@ defmodule DevicePhoneTest do
 
   alias Device.Parser
 
-  @device "phone"
+  @device :phone
 
   # regex find replace for device test cases
   # describe\('(?:\d+\.)?([^']*)',.*\n.*\n.*device\('([^']*)'\);\n.*\n.*\n.*

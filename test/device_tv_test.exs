@@ -3,7 +3,7 @@ defmodule DeviceTvTest do
 
   alias Device.Parser
 
-  @device "tv"
+  @device :tv
 
   @data [
     {"Kylo Browser", "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.2) Gecko/20100222 Firefox/3.6 Kylo/0.8.4.74873"},

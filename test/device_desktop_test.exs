@@ -3,9 +3,10 @@ defmodule DeviceDesktopTest do
 
   alias Device.Parser
 
-  @device "desktop"
+  @device :desktop
 
   @data [
+    {"Empty", nil},
     {"Apple iMac", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/534.51.22 (KHTML, like Gecko) Version/5.1.1 Safari/534.51.22"},
     {"Apple Mac Book Air 11.6\"", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/534.51.22 (KHTML, like Gecko) Version/5.1.1 Safari/534.51.22"},
     {"Apple Mac Book Pro 15\"", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/534.51.22 (KHTML, like Gecko) Version/5.1.1 Safari/534.51.22"},
